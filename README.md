@@ -13,3 +13,4 @@ How to Play:
 Controls:
 1. SPACE: Jump
 2. DOWN ARROW: Duck/Fast Drop
+![Screen Shot](img/screenshots/2.png)
