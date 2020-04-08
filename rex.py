@@ -1171,7 +1171,7 @@ def menu():
                     if game_mode == 1:
                         single_player(clouds, stars, birds)
                     else:
-                        BASE_VEL = 15
+                        BASE_VEL = 14
                         run(CONFIG_PATH)
 
         draw_menu(win, base, moon, stars, clouds, birds, rex, game_mode)
