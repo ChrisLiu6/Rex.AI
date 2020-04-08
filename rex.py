@@ -646,7 +646,7 @@ def draw_window(win, score, base, moon, stars, clouds, birds, rex, cacti, badbir
     # Show Texts
     c1 = font3.render('SPACE: Jump', 1, pygame.Color('gray 50'))
     c2 = font3.render('DOWN ARROW: Duck/Fast Drop', 1, pygame.Color('gray 50'))
-    c3 = font3.render('Press N to Play Next Song', 1, pygame.Color('gray 50'))
+    c3 = font3.render('Press N to Change Song', 1, pygame.Color('gray 50'))
     text_quit = font3.render('Press ESC to Return', 1, pygame.Color('gray 50'))
     win.blit(text_quit, (800, 380))
     win.blit(c1, (420, 360))
@@ -745,7 +745,7 @@ def draw_ai(win, score, base, moon, stars, clouds, birds, cacti, badbirds, rexes
         rex.draw(win)
 
     # Texts
-    c3 = font3.render('Press N to Play Next Song', 1, pygame.Color('gray 50'))
+    c3 = font3.render('Press N to Change Song', 1, pygame.Color('gray 50'))
     text_quit = font3.render('Press ESC to Return', 1, pygame.Color('gray 50'))
     win.blit(c3, (800, 360))
     win.blit(text_quit, (800, 380))
@@ -768,7 +768,7 @@ def draw_menu(win, base, moon, stars, clouds, birds, rex, game_mode):
     menu2 = font2.render('WATCH AI LEARN REX.AI', 1, pygame.Color("gray45"))
     win.blit(menu2, (420, 210))
 
-    text1 = font3.render('Press N to Play Next Song', 1, pygame.Color('gray 50'))
+    text1 = font3.render('Press N to Change Song', 1, pygame.Color('gray 50'))
     text2 = font3.render('SELECT MODE', 1, pygame.Color('gray 70'))
     text_quit = font3.render('Press ESC to Quit', 1, pygame.Color('gray 50'))
     win.blit(text1, (800, 360))
