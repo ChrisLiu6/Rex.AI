@@ -766,7 +766,7 @@ def draw_menu(win, base, moon, stars, clouds, birds, rex, game_mode):
     menu1 = font2.render('SINGLE PLAYER', 1, pygame.Color("gray45"))
     win.blit(menu1, (420, 150))
     menu2 = font2.render('WATCH AI LEARN REX.AI', 1, pygame.Color("gray45"))
-    win.blit(menu2, (420, 210))
+    win.blit(menu2, (370, 210))
 
     text1 = font3.render('Press N to Change Song', 1, pygame.Color('gray 50'))
     text2 = font3.render('SELECT MODE', 1, pygame.Color('gray 70'))
@@ -779,7 +779,7 @@ def draw_menu(win, base, moon, stars, clouds, birds, rex, game_mode):
     if game_mode == 1:
         win.blit(IMG_ARROW, (385, 143))
     else:
-        win.blit(IMG_ARROW, (385, 203))
+        win.blit(IMG_ARROW, (335, 203))
 
     # Base
     base.draw(win)
