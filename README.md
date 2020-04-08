@@ -6,7 +6,10 @@ Installation:
 2. pip install neat-python
 
 How to Play:
+1. Run rex.py
+4. Sound ON
+5. Have Fun!
+
+Controls:
 1. SPACE: Jump
 2. DOWN ARROW: Duck/Fast Drop
-3. Sound ON
-4. Have Fun!
