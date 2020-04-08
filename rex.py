@@ -749,6 +749,8 @@ def draw_ai(win, score, base, moon, stars, clouds, birds, cacti, badbirds, rexes
     text_quit = font3.render('Press ESC to Return', 1, pygame.Color('gray 50'))
     win.blit(c3, (800, 360))
     win.blit(text_quit, (800, 380))
+    c1 = font3.render('L: Toggle Lines', 1, pygame.Color('gray 50'))
+    win.blit(c1, (420, 380))
 
     # Update
     pygame.display.update()
@@ -951,7 +953,7 @@ def single_player(clouds, stars, birds):
 
 
 def ai_play(genomes, config):
-    global AI_HIGH_SCORE, GEN
+    global AI_HIGH_SCORE, GEN, DRAW_LINE
     base = Base(FLOOR)
     moon = Moon()
     win = WIN
@@ -1034,6 +1036,8 @@ def ai_play(genomes, config):
                     menu()
                 if event.key == pygame.K_n:
                     next_song()
+                if event.key == pygame.K_l:
+                    DRAW_LINE = not DRAW_LINE
 
         # Bad birds and cacti remove list
         badbirds_rem = badbirds
