@@ -767,7 +767,7 @@ def draw_menu(win, base, moon, stars, clouds, birds, rex, game_mode):
     win.blit(title_text2, (417, 30))
     menu1 = font2.render('SINGLE PLAYER', 1, pygame.Color("gray45"))
     win.blit(menu1, (420, 150))
-    menu2 = font2.render('WATCH AI LEARN REX.AI', 1, pygame.Color("gray45"))
+    menu2 = font2.render('WATCH AI PLAY REX.AI', 1, pygame.Color("gray45"))
     win.blit(menu2, (370, 210))
 
     text1 = font3.render('Press N to Change Song', 1, pygame.Color('gray 50'))
