@@ -15,6 +15,7 @@ MUSIC_DIR = os.path.join(LOCAL_DIR, 'sound')
 
 # Clock
 clock = pygame.time.Clock()
+clock.tick(40)
 
 # Fonts
 font = pygame.font.SysFont("comicsans", 24)
@@ -109,8 +110,8 @@ class Base:
         self.vel = BASE_VEL
 
     def move(self):
-        self.x1 -= self.vel
-        self.x2 -= self.vel
+        self.x1 = round(self.x1 - self.vel)
+        self.x2 = round(self.x2 - self.vel)
 
         if self.x1 + self.WIDTH < 0:
             self.x1 = self.x2 + self.WIDTH
@@ -118,7 +119,7 @@ class Base:
             self.x2 = self.x1 + self.WIDTH
 
     def update_speed(self):
-        self.vel = BASE_VEL
+        self.vel = round(BASE_VEL)
 
     def draw(self, win):
         win.blit(self.IMG, (self.x1, self.y))
@@ -232,7 +233,7 @@ class BadBird:
         self.IMG = self.IMG1
 
     def move(self):
-        self.x -= self.vel
+        self.x = round(self.x - self.vel)
 
     def getY(self):
         chance = random.randint(1, 4)
@@ -244,7 +245,7 @@ class BadBird:
             return 180
 
     def update_speed(self):
-        self.vel = BASE_VEL
+        self.vel = round(BASE_VEL)
 
     def draw(self, win):
         # Animation
@@ -352,10 +353,10 @@ class Cactus:
                     return self.BCACTI[1]
 
     def move(self):
-        self.x -= self.vel
+        self.x = round(self.x - self.vel)
 
     def update_speed(self):
-        self.vel = BASE_VEL
+        self.vel = round(BASE_VEL)
 
     def draw(self, win):
         win.blit(self.IMG, (self.x, self.y))
@@ -522,7 +523,7 @@ class Healthpack:
         self.x -= self.vel
 
     def update_speed(self):
-        self.vel = BASE_VEL
+        self.vel = round(BASE_VEL)
 
     def draw(self, win):
         win.blit(self.IMG, (self.x, self.y))
@@ -843,7 +844,7 @@ def single_player(clouds, stars, birds):
     while run and health > 0:
         # Clock and timers
         timer += 1
-        clock.tick(60)
+        clock.tick(40)
         score += 0.05 + BASE_VEL * 0.05
 
         # Update game speed
@@ -985,8 +986,8 @@ def ai_play(genomes, config):
 
     while run and len(rexes) > 0:
         # Clock and timers
+        clock.tick(40)
         timer += 1
-        clock.tick(200)
         score += 0.05 + BASE_VEL * 0.05
 
         # Update game speed
@@ -1145,6 +1146,7 @@ def menu():
     game_mode = 1
 
     while True:
+        clock.tick(40)
         # Add birds
         if 1 >= random.randint(1, 300) and len(birds) < 3:
             birds.append(Bird())
